@@ -1,0 +1,5 @@
+yandex-music>=3.2,<4
+ytmusicapi>=1.12,<2
+anyascii>=0.3.2,<1
+tqdm>=4.66
+tomli>=2.0; python_version < "3.11"

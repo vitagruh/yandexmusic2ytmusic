@@ -1,0 +1,30 @@
+# Виртуальные окружения
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Рабочие артефакты прогонов
+runs/
+runs-test*/
+out/
+out-test*/
+.pytest_cache/
+.coverage
+
+# Состояние и кэш
+.yandex2ytm/
+.state-test/
+.cache/
+
+# Секреты и авторизация
+browser.json
+oauth.json
+*oauth*.json
+.env
+*.log

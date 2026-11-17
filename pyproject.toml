@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yandexmusic2ytmusic"
+version = "0.2.0"
+description = "Перенос и синхронизация плейлистов Яндекс.Музыки в YouTube Music"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-only" }
+authors = [{ name = "vitagruh" }]
+keywords = ["yandex-music", "youtube-music", "playlist", "migration"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Environment :: Console",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = [
+  "yandex-music>=3.2,<4",
+  "ytmusicapi>=1.12,<2",
+  "anyascii>=0.3.2,<1",
+  "tqdm>=4.66",
+  "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+yandex2ytm = "yandex_to_ytmusic:main"
+
+[tool.setuptools]
+py-modules = ["yandex_to_ytmusic"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
